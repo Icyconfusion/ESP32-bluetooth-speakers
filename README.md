@@ -28,6 +28,8 @@ For audio handling, I used the official ESP-IDF program as firmware, which can b
 
 For basic audio, I only had to configure it to my pins in board_pins.h . But for other features like equalization, volume control, rotary encoder, buttons, display etc I had to write files. The idea of the firmware is that the ESP32 connects via bluetooth, at which point it displays paired on the Oled. After this it can recieve audio, which passes through the equalization and volume control, of which I have made presets before being passed to the DAC. The rotary encoder can be used to: cycle through EQ presets, control volume and mode, which are visible on the Oled.
 
+There are a number of C and header files that had to be created to make the project work, these files live in the 'main' folder in IDF. To install, simply extract the zipped 'main' folder into the 'main' folder of your IDF installation.
+
 # **BOM**
 
 ### Printed parts
